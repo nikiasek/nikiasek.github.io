@@ -1,0 +1,18 @@
+* {
+    background-color: #26292e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: auto 0;
+}
+.header {
+    background-color: #1e2024;
+    height: 5%;
+    width: 100%;
+    padding: 20px 10px;
+}
+.header a {
+    float: left;
+    color: #ebf2ff;
+}
