@@ -21,16 +21,6 @@ body {
     height: 80px;
     background-color: #090d14;
 }
-header {
-    padding-top: 15px;
-    padding-left: 30px;
-    font-size: xx-large;
-    text-align: center;
-    color: #e8f0fc;
-    float:center;
-    display: flex;
-    justify-content: center;
-}
 .header a {
     margin-right: 30px;
     margin-top: 15px;
@@ -38,8 +28,9 @@ header {
     color:#e8f0fc;
     text-align: center;
     border-radius: 10px;
-    padding: 15px;
+    padding: 12px;
     float:right;
+    transition: background-color 0.5s;
 }
 .header a.active {
     background-color: #1a548f;
@@ -51,26 +42,47 @@ header {
     font-size: large;
     font-weight: bold;
     float: left;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 30px;
     width: 250px;
+    line-height: 18px;
 }
 
 /* CONTENT */
 .content {
-    background-color:#111926;
+    background-image: linear-gradient(#090d14,#111926,#090d14);
     width: 100%;
-    height: 100vh;
+    height: 82vh;
+    text-align: center;
+    color:#e8f0fc;
 }
+.content-nadpis {
+    padding: 10%;
+}
+.content-info {
+    text-align: center;
+    color:#e8f0fc
+}
+
+header {
+    font-size: xx-large;
+}
+h1 {
+    font-size: 50px;
+}
+
 
 /* FOOTER */
 .footer {
     background-color:#090d14;
     width: 100%;
-    height: 80px;
+    height: 79px;
     margin: auto;
     text-align: center;
     padding-top: 15px;
     color:#48525f;
-    margin: auto;
+}
+.footer-copyright {
+    margin-bottom: 0px;
+    margin-top: 50px;
 }
