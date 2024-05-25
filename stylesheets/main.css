@@ -1,9 +1,85 @@
 @import url("https://fonts.googleapis.com/css?family=Teko:700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
 
 body{
     padding:100px 0;
     background-color:#fff;
-    animation: fadeIn 5s;
+    animation: fade 4s;
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   .main {
@@ -15,7 +91,6 @@ body{
       position: relative;
       width: 100px;
       height: 90px;
-      animation: fadeIn 1s;
       animation: heartbeat 1s infinite;
       margin:0 auto;
     
@@ -57,10 +132,7 @@ body{
               transform-origin :100% 100%;
   }
   
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+
   
   @keyframes heartbeat
   {
@@ -90,81 +162,34 @@ body{
     }
   }
 
-  .ily {
-    display: flex;
-    background-color: #c33;
-    height: 50vw;
-    text-align: center;
-    justify-content: center;
-    border-radius: 10px;
+  @keyframes fade{
+    from {opacity: 0;}
+    to {opacity: 1;}
   }
 
-    h1 {
-      margin: 0;
-      padding-bottom: 6rem;
-      grid-column: 1;
-      grid-row: 1;
-      z-index: 1;
-      font-family: 'Teko', sans-serif;
-      font-size: 5rem;
-      text-transform: uppercase;
-      animation: glow 2s ease-in-out infinite alternate;
-      text-align: center;
-      justify-content: center;
-    }
-    a {
-      font-family: 'Teko', sans-serif;
-      color: #c33;
-      grid-column: 1;
-      grid-row: 1;
-      align-self: end;
-      justify-self: center;
-      padding-bottom: 1rem;
-    }
 
-    span {
-        color: #fff
-    }
-    
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 20px rgb(160, 69, 69);
-      }
-      to {
-        text-shadow: 0 0 30px rgb(228, 154, 154), 0 0 10px #919191;
-      }
-    }
-  
+  .text {
+    font-family: Roboto;
+    color: #c33;
+  }
 
-  .comic-button {
-    display: inline-block;
-    padding: 10px;
-    margin: 50px 10vw;
-    justify-content: center;
-    align-items: center;  
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    background-color: #c33;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    box-shadow: 5px 5px 0px #000;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
+
+hr {
+  color: #fff;
+  border-width: 0px;
+  margin: 30px;
+}
+
+.hidden {
+  background-color: #c33;
+  padding: 20px;
+  color: #fff;
+  border-radius: 25px;
+  opacity: 0;
+  transition: all 1s
   
-  .comic-button:hover {
-    background-color: #fff;
-    color: #ff5252;
-    border: 2px solid #ff5252;
-    box-shadow: 5px 5px 0px #ff5252;
-  }
-  
-  .comic-button:active {
-    background-color: rgb(61, 10, 10);
-    box-shadow: none;
-    transform: translateY(4px);
-  }
-  
+}
+
+.show {
+  opacity: 1
+}
