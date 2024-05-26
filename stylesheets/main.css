@@ -186,7 +186,8 @@ hr {
   color: #fff;
   border-radius: 25px;
   opacity: 0;
-  transition: all 1s
+  transition: all 1s;
+  font-size: 18px;
   
 }
 
