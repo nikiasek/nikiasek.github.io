@@ -69,8 +69,8 @@ a:hover {
 
 .container-text-1, .container-text-2, .container-text-3 {
     position: absolute;
-    max-width: 20%;
-    font-size: xx-large;
+    font-size: 2rem;
+    width: 20%;
 }
 
 .container-text-1 {
@@ -136,11 +136,16 @@ a:hover {
     background-color: var(--background-color)
 }
 
+.container-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .container-3>img {
-    width: 5%;
-    margin: 2rem;
-    margin-left: 0;
+    width: 14%;
     transition-duration: 0.5s;
+    margin: 1rem;
 }
 
 .container-3>img:hover {
@@ -148,7 +153,26 @@ a:hover {
 }
 
 .container-item-flex {
-    display: flex
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    
+    justify-content: space-between;
+}
+
+.flex-item {
+    width: 25vw;
+    margin-top: 4rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    align-content: baseline;
+    text-align: center;
+    transition-duration: 0.5s;
+    background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2) 51%, var(--gradient-1)) var(--x, 0)/ 200%;
+}
+
+.flex-item:hover {
+    --x: 100%
 }
 
 /* FOOTER STYLE */
@@ -184,16 +208,20 @@ a>img {
 a>img:hover {
     transform: scale(1.1);
 }
-/* ID STYLE  */
 
-#gradient-text {
+h3 {
+    margin-top: 0;
+}
+/* STYLE  */
+
+.gradient-text {
     color: transparent;
     background: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
     -webkit-text-fill-color: transparent; 
     background-clip: text; 
 }
 
-#gray-text {
+.gray-text {
     color: var(--text-gray);
 }
 
@@ -235,5 +263,53 @@ a>img:hover {
 
     .footer-flex-item>img {
         width: 15vw;
+    }
+}
+
+@media only screen and (max-width: 811px) {
+    .header {
+        margin: 3rem;
+    }
+
+    .container-text-2 {
+    right: 8rem;
+    top: 0;
+    transition-duration: 0.5s;
+    }
+
+    .container-text-2 {
+        transform: scale(1.4);
+        font-size: small;
+    }
+
+    .projects-item {
+        width: 20vw;
+    }
+
+    .projects-item>a {
+        font-size: 1.2rem
+    }
+
+    .flex-item {
+        width: 20vw
+    }
+
+    .container-3>img {
+        width: 3rem;
+    }
+
+    .flex-item>h1 {
+        font-size: 1.7rem;
+    }
+
+    .footer-flex-item>a>img {
+        width: 5vw;
+    }
+
+}
+
+@media only screen and (max-width: 429px) {
+    .header {
+        margin: 1rem;
     }
 }

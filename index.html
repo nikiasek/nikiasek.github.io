@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
@@ -13,34 +14,37 @@
         </div>
         <div class="links" style="flex-grow: 3;">
             <div class="header-item">
-                <a href="" id="gradient-text">LIBRARY</a>
+                <a href="" class="gradient-text " id="myLinks">LIBRARY</a>
             </div>
             <div class="header-item">
-                <a href="https://github.com/nikiasek" id="gradient-text">GITHUB</a>
+                <a href="https://github.com/nikiasek" class="gradient-text" id="myLinks">GITHUB</a>
             </div>
             <div class="header-item">
-                <a href="#footer" id="gradient-text">CONTACTS</a>
+                <a href="#footer" class="gradient-text" id="myLinks">CONTACTS</a>
             </div>
         </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
     <div class="container">
         <div class="container-item-1">
             <img src="niki2.png" alt="">
             <div class="container-text-1">
                 <p>I'm Nikolas</p>
-                <h1 id="gradient-text">Frontend & Backend developer</h1>
+                <h1 class="gradient-text">Frontend & Backend developer</h1>
                 <p>I will make your vision come true</p>
             </div>
             <div class="container-text-2">
-                <h1 id="gradient-text">Programmer</h1>
+                <h1 class="gradient-text">Programmer</h1>
                 <p>I can make your system run</p>
             </div>
             <div class="container-text-3">
-                <p>I focus on making reliable, fast and clean code and also on <span id="gradient-text">Great UI/UX</span> </p>
+                <p>I focus on making reliable, fast and clean code and also on <span class="gradient-text">Great UI/UX</span> </p>
             </div>
         </div>
         <div class="container-item-2">
-            <h1 id="gradient-text">Projects</h1>
+            <h1 class="gradient-text">Projects</h1>
             <p>These are my 3 favorite projects I've done so far. Everyone has their own unique style and reason why they exist, and I also think that these have pushed me the most in my development</p>
             <div class="container-projects">
                 <div class="projects-item">
@@ -58,14 +62,18 @@
             </div>
         </div>
         <div class="container-item-3">
+            <h1 class="gradient-text">Tools</h1>
+            <p>Some tools i use normally</p>
             <div class="container-item-flex">
                 <div class="flex-item">
-                    <h1 id="gradient-text">Programming languages</h1>
+                    <h1>Programming languages</h1>
                     <div class="container-3">
                         <img src="assets/index/python.png" alt="">
                         <img src="assets/index/js.png" alt="">
                     </div>
-                    <h1 id="gradient-text">Frameworks</h1>
+                </div>
+                <div class="flex-item">
+                    <h1>Frameworks</h1>
                     <div class="container-3">
                         <img src="assets/index/react.png" alt="">
                         <img src="assets/index/django.png" alt="">
@@ -73,14 +81,13 @@
                         <img src="assets/index/html.png" alt="">
                         <img src="assets/index/css-3.png" alt="">
                     </div>
-                    <h1 id="gradient-text">Libraries</h1>
+                </div>
+                <div class="flex-item">
+                    <h1>Libraries</h1>
                     <div class="container-3">
                         <img src="assets/index/mongodb.png" alt="">
                         <img src="assets/index/mariadb.png" alt="">
                         <img src="assets/index/bootstrap.png" alt="">
-                    </div>
-                    <h1 id="gradient-text">Other tools</h1>
-                    <div class="container-3">
                         <img src="assets/index/nodejs.png" alt="">
                     </div>
                 </div>
@@ -93,12 +100,12 @@
                 <img src="assets/index/logo2-w.png" alt="">
             </div>
             <div class="footer-flex-item">
-                <h3 id="gray-text">Get in touch</h3>
+                <h3 class="gray-text">Get in touch</h3>
                 <p><a href="mailto:nikiasek50@gmail.com">nikiasek50@gmail.com</a></p>
                 <p><a href="mailto:n.stankovic@student.nosch.cz">n.stankovic@student.nosch.cz</a></p>
             </div>
             <div class="footer-flex-item">
-                <h3 id="gray-text">Connect</h3>
+                <h3 class="gray-text">Connect</h3>
                 <a href="https://www.instagram.com/nikiasekcz/">
                     <img src="assets/index/instagram.png" alt="">
                 </a>
@@ -112,8 +119,18 @@
                 </a>
             </div>
         </div>
-        <p id="gray-text">Portfolio by Nikolas Stankovič</p>
-        <p id="gray-text">@2024 Nikolas Stankovič</p>
+        <p class="gray-text">Portfolio by Nikolas Stankovič</p>
+        <p class="gray-text">@2024 Nikolas Stankovič</p>
     </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
 </body>
 </html>
