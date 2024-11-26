@@ -21,6 +21,23 @@ body {
 }
 
 /* HEADER STYLE */
+input[checkbox] {
+    display:none;
+}
+
+nav {
+    display: none;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+#check:checked ~ .nav-mobile {
+    display: block;
+}
+
+   /**/
 
 .header, .links {
     display: flex;
@@ -49,6 +66,7 @@ a:hover {
 .logo:hover {
     width: 11vw;
 }
+
 
 
 /* CONTENT STYLE*/
@@ -311,5 +329,17 @@ h3 {
 @media only screen and (max-width: 429px) {
     .header {
         margin: 1rem;
+        margin-bottom: 50rem;
     }
+
+    nav {
+        display: block;
+    }
+
+    .links {
+        display: none;
+    }
+    
+
+    
 }
