@@ -1,2 +1,0 @@
-# nikiasek.github.io
-portfolio

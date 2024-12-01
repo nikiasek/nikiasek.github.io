@@ -74,7 +74,10 @@ nav {
 
 
 .nav-mobile>a {
-    margin: 1rem;
+    margin: 1.25rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
 }
 
    /**/
