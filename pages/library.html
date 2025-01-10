@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/library.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo" style="flex-grow: 5;">
+            <img class="logo" src="../assets/index/logo1-b.png" alt="ahoj">
+        </div>
+        <div class="links" style="flex-grow: 3;">
+            <div class="header-item">
+                <a href="https://github.com/nikiasek" target="_blank" class="gradient-text">GITHUB</a>
+            </div>
+            <div class="header-item">
+                <a href="#footer" class="gradient-text">CONTACTS</a>
+            </div>
+            <div class="header-item">
+                <a href="../index.html" class="gradient-text">HOME</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars unchecked"></i>
+            <i class="fa-solid fa-x checker"></i>
+        </label>
+        <div class="nav-mobile">
+            <a href="https://github.com/nikiasek" target="_blank" class="gradient-text">GITHUB</a>
+            <a href="#footer" class="gradient-text">CONTACTS</a>
+            <a href="../index.html" class="gradient-text">HOME</a>
+        </div>
+        <div class="mobile-text">
+            <p>I'm Nikolas</p>
+            <h1><span class="gradient-text">Frontend</span>, <span class="gradient-text">Backend developer</span> & <span class="gradient-text">Programmer</span></h1>
+            <p>I will make your vision come true</p>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="finder">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <input type="button" value="Javascript">
+            <input type="button" value="Python">
+            <input type="button" value="React">
+            <input type="button" value="Django">
+        </div>
+    </div>
+</body>
+</html>
