@@ -49,13 +49,14 @@
 
     <div class="container">
         <div class="finder">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-            <input type="button" value="Javascript">
-            <input type="button" value="Python">
-            <input type="button" value="React">
-            <input type="button" value="Django">
+            <input type="text" id="myInput" placeholder="Search for names..">
+            <label for="Javascript">Javascript<input id="button-filter"type="checkbox" value="Javascript"></label>
+            <label for="">Python<input type="checkbox" value="Python"></label>
+            <label for="">React <input type="checkbox" value="React"></label>
+            <label for="">Django <input type="checkbox" value="Django"></label>
         </div>
         <div class="container-items" id="items">
+            <p id="values"></p>
         </div>
     </div>
 </body>

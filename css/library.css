@@ -13,7 +13,7 @@
     border-radius: 1rem;
 }
 
-input[type=button] {
+input[type=checkbox] {
     /**background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2) 51%, var(--gradient-1)) var(--x, 0)/ 200%;*/
     /*color: var(--text-color); */
     font-size: 1.1rem; /* Increase font-size */
