@@ -14,8 +14,8 @@
 }
 
 input[type=button] {
-    background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2) 51%, var(--gradient-1)) var(--x, 0)/ 200%;
-    color: var(--text-color);
+    /**background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2) 51%, var(--gradient-1)) var(--x, 0)/ 200%;*/
+    /*color: var(--text-color); */
     font-size: 1.1rem; /* Increase font-size */
     padding: 0.8rem;
     border: none;
