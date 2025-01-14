@@ -50,13 +50,15 @@
     <div class="container">
         <div class="finder">
             <input type="text" id="myInput" placeholder="Search for names..">
-            <label for="Javascript">Javascript<input id="button-filter"type="checkbox" value="Javascript"></label>
-            <label for="">Python<input type="checkbox" value="Python"></label>
-            <label for="">React <input type="checkbox" value="React"></label>
-            <label for="">Django <input type="checkbox" value="Django"></label>
+            <div class="filterCard"><label for="">Javascript<input onclick="checkboxes()" class="check" type="checkbox" value="Javascript"></label></div>
+            <div class="filterCard"><label for="">Python    <input onclick="checkboxes()" class="check" type="checkbox" value="Python"></label></div>
+            <div class="filterCard"><label for="">React     <input onclick="checkboxes()" class="check" type="checkbox" value="React"></label></div>
+            <div class="filterCard"><label for="">Django    <input onclick="checkboxes()" class="check" type="checkbox" value="Django"></label></div>
         </div>
         <div class="container-items" id="items">
-            <p id="values"></p>
+            <p id="value1"></p>
+            <p id="value2"></p>
+            <p id="value3"></p>
         </div>
     </div>
 </body>

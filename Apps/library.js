@@ -1,36 +1,58 @@
 const testdicts = [
     {
-        name : "Test1",
+        name : "test1",
         link: "https://www.geeksforgeeks.org/how-to-create-dictionary-and-add-key-value-pairs-dynamically/",
         flag : ["javascript", "html"]
     },
     {
-        name : "Test2",
+        name : "test2",
         link: "https://www.geeksforgeeks.org/how-to-create-dictionary-and-add-key-value-pairs-dynamically/",
         flag : ["python", "html"]
     },
     {
-        name : "Test3",
+        name : "tesst3",
         link: "https://www.geeksforgeeks.org/how-to-create-dictionary-and-add-key-value-pairs-dynamically/",
         flag : ["django", "react"]
     }
-]
-const div = document.getElementById("items")
-const searchDiv = document.getElementById("myInput")
+];
+const searchDiv = document.getElementById("myInput");
+let listFilter = [];
+let searchFilter = "";
+const test1 = document.getElementById("value1");
+const test2 = document.getElementById("value2");
+const test3 = document.getElementById("value3");
 
-searchDiv.addEventListener("onsearch", updateValue)
-
-function updateValue(e) {
-    div.innerHTML = `<p>${e.target.value}</p>`
+const checkboxes = () => {
+    const checkbox = document.getElementsByClassName("check");
+    for(let i = 0; i < checkbox.length; i++) {
+        let checkboxValue = checkbox[i].value
+        console.log("val: " + checkboxValue)
+        if(checkbox[i].checked) {
+            if(listFilter.indexOf(checkboxValue) === -1) {
+                listFilter.push(checkboxValue)
+                console.log("jo: " + checkboxValue)
+            }
+        }
+        else {
+            const index = listFilter.indexOf(checkboxValue);
+            if(index !== -1) {
+                listFilter.splice(index, 1)
+                console.log("ne: " + checkboxValue)
+            }
+        }
+    }
+    test1.innerText = listFilter
 }
 
+const updateValue = (e) => {
+    const inputValue = e.target.value.toLowerCase();
+    test2.innerText = inputValue;
+    let filteredUsers = testdicts.filter((card) => {
+        return card.name.toLowerCase().includes(inputValue);
+    });
+    searchFilter = filteredUsers
+}
 
-let filteredUsers = testdicts.filter((card) => {
-    return card.name === "Test1";
-});
+searchDiv.addEventListener("input", updateValue)
 
-console.log(filteredUsers)
-
-
-div.innerHTML += "<h1>test</h1>" + filteredUsers[0].flag
 
