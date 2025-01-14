@@ -46,11 +46,12 @@ const checkboxes = () => {
 
 const updateValue = (e) => {
     const inputValue = e.target.value.toLowerCase();
-    test2.innerText = inputValue;
+    searchFilter = inputValue;
     let filteredUsers = testdicts.filter((card) => {
         return card.name.toLowerCase().includes(inputValue);
     });
-    searchFilter = filteredUsers
+    test2.innerText = searchFilter;
+    test3.innerText = filteredUsers.map(user => user.name).join(', ');
 }
 
 searchDiv.addEventListener("input", updateValue)
