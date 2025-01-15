@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="../css/basic.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/library.css">
-    <link rel="stylesheet" href="../css/library.css">
     <script defer src="../Apps/library.js"></script>
     <script src="https://kit.fontawesome.com/3e19948a92.js" crossorigin="anonymous"></script>
-    <title>Document</title>
 </head>
 <body>
     <div class="header">
@@ -50,10 +48,27 @@
     <div class="container">
         <div class="finder">
             <input type="text" id="myInput" placeholder="Search for names..">
-            <div class="filterCard"><label for="">Javascript<input onclick="checkboxes()" class="check" type="checkbox" value="Javascript"></label></div>
-            <div class="filterCard"><label for="">Python    <input onclick="checkboxes()" class="check" type="checkbox" value="Python"></label></div>
-            <div class="filterCard"><label for="">React     <input onclick="checkboxes()" class="check" type="checkbox" value="React"></label></div>
-            <div class="filterCard"><label for="">Django    <input onclick="checkboxes()" class="check" type="checkbox" value="Django"></label></div>
+            <button id="clearButton">Clear</button>
+            <div class="filterCard">
+                <label for="">Javascript
+                    <input class="check" type="checkbox" value="Javascript">
+                </label>
+            </div>
+            <div class="filterCard">
+                <label for="">Python
+                    <input class="check" type="checkbox" value="Python">
+                </label>
+            </div>
+            <div class="filterCard">
+                <label for="">React
+                    <input class="check" type="checkbox" value="React">
+                </label>
+            </div>
+            <div class="filterCard">
+                <label for="">Django
+                    <input class="check" type="checkbox" value="Django">
+                </label>
+            </div>
         </div>
         <div class="container-items" id="items">
             <p id="value1"></p>
