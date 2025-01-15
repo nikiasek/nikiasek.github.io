@@ -15,6 +15,14 @@ const testdicts = [
         flag : ["django", "react"]
     }
 ];
+
+let testdict2 = [
+    {
+        name: "",
+        flag: []
+    }
+]
+
 const searchDiv = document.getElementById("myInput");
 let listFilter = [];
 let searchFilter = "";
@@ -44,12 +52,15 @@ const checkboxes = () => {
     test1.innerText = listFilter
 }
 
-const updateValue = (e) => {
-    const inputValue = e.target.value.toLowerCase();
-    searchFilter = inputValue;
+const getUpdatedValues = () => {
     let filteredUsers = testdicts.filter((card) => {
         return card.name.toLowerCase().includes(inputValue);
     });
+}
+
+const updateValue = (e) => {
+    const inputValue = e.target.value.toLowerCase();
+    searchFilter = inputValue;
     test2.innerText = searchFilter;
     test3.innerText = filteredUsers.map(user => user.name).join(', ');
 }
