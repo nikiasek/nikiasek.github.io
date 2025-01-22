@@ -1,6 +1,6 @@
 .finder {
     width: 90%;
-    margin: auto;
+    padding: 3rem;
 }
 
 #myInput {
@@ -26,4 +26,39 @@ input[type=checkbox] {
 
 input[type=button]:hover {
     --x: 100%
+}
+
+.container {
+    padding: 3rem
+}
+
+.container-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+    padding: 3rem;
+
+}
+
+.flex-item {
+    background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2) 51%, var(--gradient-1)) var(--x, 0)/ 200%;
+    width: 25vw;
+    height: 25vh;
+    margin-top: 4rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    align-content: center;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+.flex-item:hover {
+    --x: 100%
+}
+
+#clearButton {
+    background-color: var(--background-color-2);
+    padding: 1rem;
+    border-style: none;
 }

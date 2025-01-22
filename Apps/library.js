@@ -51,10 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if(testdict2.name === "" && testdict2.flag.length === 0) {
                 return "empty"
             }
-             else if(testdict2.name === "") {
+            if(testdict2.name === "") {
                 // Check if there is at least one matching flag
                 return testdict2.flag.some(flag => card.flag.includes(flag));
-                
             }
             else if(testdict2.flag.length === 0) {
                 // Check if the name matches the search input
@@ -75,20 +74,25 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(filteredUsers)
     
         // Update the display with the filtered results
-        if (filteredUsers.length > 0) {
+        if(filteredUsers.length === 0) {
+            itemCard.innerHTML = "No results found"
+        }
+        else if (filteredUsers.length > 0) {
             itemCard.innerHTML = ""
             filteredUsers.forEach(element => {
                 itemCard.innerHTML += 
-            `<div>
+            `<div class="flex-item">
                 <h1>${element.name}</h1>
+                <a href="${element.link}"> project link!</a>
             </div>`
             });
         } else {
             itemCard.innerHTML = ""
             testdicts.forEach(element => { 
                 itemCard.innerHTML += 
-            `<div>
+            `<div class="flex-item">
                 <h1>${element.name}</h1>
+                <a href="${element.link}"> project link!</a>
             </div>`
             });
         }
