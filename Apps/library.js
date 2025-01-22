@@ -25,9 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const test1 = document.getElementById("value1");
     const test2 = document.getElementById("value2");
     const test3 = document.getElementById("value3");
-    const clearButton = document.createElement("button");
-    clearButton.innerText = "Clear";
-    searchDiv.parentNode.insertBefore(clearButton, searchDiv.nextSibling);
+    const clearButton = document.getElementById("clearButton")
+    const itemCard = document.getElementById("items")
+
+    window.onload = () => {
+        clearFilters()
+        getUpdatedValues()
+    }
 
     const checkboxes = () => {
         const checkbox = document.getElementsByClassName("check");
@@ -44,21 +48,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const getUpdatedValues = () => {
         let filteredUsers = testdicts.filter((card) => {
-            // Check if the name matches the search input
-            const nameMatch = card.name.toLowerCase().includes(testdict2.name.toLowerCase());
-    
-            // Check if there is at least one matching flag
-            const flagMatch = testdict2.flag.some(flag => card.flag.includes(flag));
-    
-            // Return true only if both conditions are met
-            return nameMatch && flagMatch;
+            if(testdict2.name === "" && testdict2.flag.length === 0) {
+                return "empty"
+            }
+             else if(testdict2.name === "") {
+                // Check if there is at least one matching flag
+                return testdict2.flag.some(flag => card.flag.includes(flag));
+                
+            }
+            else if(testdict2.flag.length === 0) {
+                // Check if the name matches the search input
+                return card.name.toLowerCase().includes(testdict2.name.toLowerCase());
+            }
+            else {
+                // Check if the name matches the search input
+                const nameMatch = card.name.toLowerCase().includes(testdict2.name.toLowerCase());
+                
+                // Check if there is at least one matching flag
+                const flagMatch = testdict2.flag.some(flag => card.flag.includes(flag));
+                
+                // Return true only if both conditions are met
+                return nameMatch && flagMatch;
+            }
         });
+
+        console.log(filteredUsers)
     
         // Update the display with the filtered results
         if (filteredUsers.length > 0) {
-            test3.innerText = filteredUsers.map(user => user.name).join(', ');
+            itemCard.innerHTML = ""
+            filteredUsers.forEach(element => {
+                itemCard.innerHTML += 
+            `<div>
+                <h1>${element.name}</h1>
+            </div>`
+            });
         } else {
-            test3.innerText = "No results found"; // Show message if no results
+            itemCard.innerHTML = ""
+            testdicts.forEach(element => { 
+                itemCard.innerHTML += 
+            `<div>
+                <h1>${element.name}</h1>
+            </div>`
+            });
         }
     }
 
