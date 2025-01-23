@@ -1,20 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
     const testdicts = [
         {
-            name: "test1",
-            link: "https://www.geeksforgeeks.org/how-to-create-dictionary-and-add-key-value-pairs-dynamically/",
-            flag: ["Javascript", "html"]
+            name: "MUDr caitlyn",
+            link: "https://github.com/nikiasek/MUDrCaitlyn",
+            flag: ["Python"]
         },
         {
-            name: "test2",
-            link: "https://www.geeksforgeeks.org/how-to-create-dictionary-and-add-key-value-pairs-dynamically/",
-            flag: ["Python", "html"]
+            name: "Arcaseca",
+            link: "https://github.com/nikiasek/Arcaseca",
+            flag: ["Python", "Django", "Javascript", "Html", "Css"]
         },
         {
-            name: "test3",
-            link: "https://www.geeksforgeeks.org/how-to-create-dictionary-and-add-key-value-pairs-dynamically/",
-            flag: ["Django", "React"]
+            name: "Calculator",
+            link: "https://github.com/nikiasek/calculator",
+            flag: ["Python"]
+        },
+        {
+            name: "School - Web Development",
+            link: "https://github.com/nikiasek/school-wevDevelopment",
+            flag: ["Html", "Css", "Javascript"]
+        },
+        {
+            name: "Cupid's Journal",
+            link: "https://github.com/nikiasek/school-uvod-html",
+            flag: ["React", "Javascript", "Css", "Html"]
+        },
+        {
+            name: "School - Python",
+            link: "https://github.com/nikiasek/python-school",
+            flag: ["Python"]
         }
+        
     ];
     
     let testdict2 = {
@@ -25,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const test1 = document.getElementById("value1");
     const test2 = document.getElementById("value2");
     const test3 = document.getElementById("value3");
-    const clearButton = document.getElementById("clearButton")
     const itemCard = document.getElementById("items")
 
     window.onload = () => {
@@ -75,7 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
         // Update the display with the filtered results
         if(filteredUsers.length === 0) {
-            itemCard.innerHTML = "No results found"
+            itemCard.innerHTML = 
+            `
+            <div class="flex-item">
+                <h1>No results!</h1>
+            </div>
+            `
         }
         else if (filteredUsers.length > 0) {
             itemCard.innerHTML = ""
@@ -119,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listeners
     searchDiv.addEventListener("input", updateValue);
-    clearButton.addEventListener("click", clearFilters);
     const checkboxesElements = document.getElementsByClassName("check");
     for (let checkbox of checkboxesElements) {
         checkbox.addEventListener("change", checkboxes);
