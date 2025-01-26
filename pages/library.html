@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/basic.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/library.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script defer src="../Apps/library.js"></script>
     <script src="https://kit.fontawesome.com/3e19948a92.js" crossorigin="anonymous"></script>
 </head>
@@ -46,27 +47,33 @@
     </nav>
 
     <div class="container">
+        <h1 class="gradient-text">Search</h1>
+            <p>Search for anything you'd like</p>
         <div class="finder">
             <input type="text" id="myInput" placeholder="Search for names..">
             <div class="filterCard">
-                <input class="check hidden" type="checkbox" id="Javascript" value="Javascript">
+                <input class="check hidden" type="checkbox" id="Javascript" value="js">
                 <label for="Javascript">Javascript</label>
             </div>
             <div class="filterCard">
-                <input class="check hidden" type="checkbox" id="Python" value="Python">
+                <input class="check hidden" type="checkbox" id="Python" value="python">
                 <label for="Python">Python</label>
             </div>
             <div class="filterCard">
-                <input class="check hidden" type="checkbox" id="React" value="React">
-                <label for="React">React</label>
+                <input class="check hidden" type="checkbox" id="React" value="react">
+                <label for="React">React.JS</label>
             </div>
             <div class="filterCard">
-                <input class="check hidden" type="checkbox" id="Django" value="Django">
+                <input class="check hidden" type="checkbox" id="Django" value="django">
                 <label for="Django">Django</label>
             </div>
             <div class="filterCard">
-                <input class="check hidden" type="checkbox" id="CSS" value="Css">
+                <input class="check hidden" type="checkbox" id="CSS" value="css-3">
                 <label for="CSS">CSS</label>
+            </div>
+            <div class="filterCard">
+                <input class="check hidden" type="checkbox" id="NodeJS" value="nodejs">
+                <label for="NodeJS">Node.JS</label>
             </div>
         </div>
         <div class="container-items" id="items">
@@ -74,6 +81,34 @@
             <p id="value2"></p>
             <p id="value3"></p>
         </div>
+    </div>
+    <div class="footer" id="footer">
+        <div class="footer-flex">
+            <div class="footer-flex-item">
+                <img src="../assets/index/logo2-w.png" alt="">
+            </div>
+            <div class="footer-flex-item">
+                <h3 class="gray-text">Get in touch</h3>
+                <p><a href="mailto:nikiasek50@gmail.com">nikiasek50@gmail.com</a></p>
+                <p><a href="mailto:n.stankovic@student.nosch.cz">n.stankovic@student.nosch.cz</a></p>
+            </div>
+            <div class="footer-flex-item">
+                <h3 class="gray-text">Connect</h3>
+                <a href="https://www.instagram.com/nikiasekcz/" target="_blank">
+                    <img src="../assets/index/instagram.png" alt="">
+                </a>
+                <br>
+                <a href="https://discord.gg/mPQXx9kVQ5" target="_blank">
+                    <img src="../assets/index/discord.png" alt="">
+                </a>
+                <br>
+                <a href="https://www.linkedin.com/in/nikolas-stankovic" target="_blank">
+                    <img src="../assets/index/linkedin.png" alt="">
+                </a>
+            </div>
+        </div>
+        <p class="gray-text">Portfolio by Nikolas Stankovič</p>
+        <p class="gray-text">@2024 Nikolas Stankovič</p>
     </div>
 </body>
 </html>

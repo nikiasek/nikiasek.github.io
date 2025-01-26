@@ -3,32 +3,38 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             name: "MUDr caitlyn",
             link: "https://github.com/nikiasek/MUDrCaitlyn",
-            flag: ["Python"]
+            linkName: "github.com/MUDrCaitlyn",
+            flag: ["python"]
         },
         {
             name: "Arcaseca",
             link: "https://github.com/nikiasek/Arcaseca",
-            flag: ["Python", "Django", "Javascript", "Html", "Css"]
+            linkName: "github.com/Arcaseca",
+            flag: ["python", "django", "js", "html", "css-3", "nodejs"]
         },
         {
             name: "Calculator",
             link: "https://github.com/nikiasek/calculator",
-            flag: ["Python"]
+            linkName: "github.com/calculator",
+            flag: ["python"]
         },
         {
-            name: "School - Web Development",
-            link: "https://github.com/nikiasek/school-wevDevelopment",
-            flag: ["Html", "Css", "Javascript"]
+            name: "School - uvod html",
+            link: "https://github.com/nikiasek/school-uvod-html",
+            linkName: "github.com/webDevelopment",
+            flag: ["html", "css-3", "js"]
         },
         {
             name: "Cupid's Journal",
-            link: "https://github.com/nikiasek/school-uvod-html",
-            flag: ["React", "Javascript", "Css", "Html"]
+            link: "https://github.com/nikiasek/Cupid-s-Journal",
+            linkName: "github.com/CupidsJournal",
+            flag: ["react", "js", "css-3", "html"]
         },
         {
             name: "School - Python",
             link: "https://github.com/nikiasek/python-school",
-            flag: ["Python"]
+            linkName: "github.com/python-school",
+            flag: ["python"]
         }
         
     ];
@@ -92,25 +98,33 @@ document.addEventListener("DOMContentLoaded", () => {
         if(filteredUsers.length === 0) {
             itemCard.innerHTML = 
             `
-            <div class="flex-item">
+            <div class="flex-item pop-in\">
                 <h1>No results!</h1>
             </div>
             `
         }
         else if (filteredUsers.length > 0) {
             itemCard.innerHTML = ""
+            let trueflags = ""
             filteredUsers.forEach(element => {
+                let trueflags = ""
+                for(let i = 0; i < element.flag.length; i++) {
+                    trueflags +=`<img src="../assets/index/${element.flag[i]}.png" alt="${element.flag[i]}">`
+                }
+                console.log(trueflags)
                 itemCard.innerHTML += 
-            `<div class="flex-item">
+            `<div class="flex-item pop-in">
                 <h1>${element.name}</h1>
-                <a href="${element.link}"> project link!</a>
-            </div>`
+                <a href="${element.link}" class="wrap"> ${element.linkName}</a>
+                <br>
+                ${trueflags}
+                `
             });
         } else {
             itemCard.innerHTML = ""
             testdicts.forEach(element => { 
                 itemCard.innerHTML += 
-            `<div class="flex-item">
+            `<div class="flex-item pop-in">
                 <h1>${element.name}</h1>
                 <a href="${element.link}"> project link!</a>
             </div>`

@@ -20,6 +20,10 @@ body {
     scrollbar-gutter: stable;
 }
 
+.wrap {
+    display: inline-block;
+    word-break: break-all;
+}
 
 /* STYLE  */
 .gradient-text {
@@ -32,3 +36,4 @@ body {
 .gray-text {
     color: var(--text-gray);
 }
+

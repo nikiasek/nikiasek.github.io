@@ -1,0 +1,22 @@
+{
+    "header": {
+        "contacts": "CONTACTS",
+        "library": "LIBRARY"
+    },
+    "main": {
+        "intro": "I'm Nikolas",
+        "description": "Frontend & Backend developer",
+        "vision": "I will make your vision come true",
+        "projects": "Projects",
+        "project_description": "These are my 3 favorite projects I've done so far."
+    },
+    "footer": {
+        "get_in_touch": "Get in touch",
+        "connect": "Connect",
+        "portfolio": "Portfolio by Nikolas Stankovič"
+    },
+    "library": {
+        "search" : "Search",
+        "search_description": "Search for anything you'd like"
+    }
+}

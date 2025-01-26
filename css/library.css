@@ -1,8 +1,9 @@
 .finder {
     width: 90%;
-    padding: 3rem;
+    margin-top: 3rem;
     display: flex;
     column-gap: 1rem;
+    padding-bottom: 0;
 }
 
 .filterCard {
@@ -48,15 +49,13 @@ input[type=button]:hover {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    justify-content: space-between;
-    padding: 3rem;
+    gap: 5rem;
 
 }
 
 .flex-item {
     background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2) 51%, var(--gradient-1)) var(--x, 0)/ 200%;
-    width: 25vw;
-    height: 25vh;
+    width: 23vw;
     margin-top: 4rem;
     border-radius: 2rem;
     padding: 2rem;
@@ -91,4 +90,21 @@ input[type=checkbox]+label {
 
 input[type=checkbox]:checked+label {
     color: var(--gradient-1);
-  }
+}
+
+.flex-item>img {
+    width: 2rem;
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
+@keyframes pop-in {
+    to {
+        opacity: 1;
+    }
+}
+
+.pop-in {
+    opacity: 0;
+    animation: pop-in 1s forwards;
+}
