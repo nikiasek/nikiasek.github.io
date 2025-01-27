@@ -13,7 +13,12 @@
         "programmer": "Programátor",
         "programmer2": "dokážu rozjet vaše systémy",
         "projects": "Projekty",
-        "project_description": "Toto jsou mé 3 oblíbené projekty, které jsem doposud udělal. Každý má svůj unikátní styl a důvod proč jsou, taktéž si myslím, že mě posunuli nejdál z mé celé Vývojařské kariéry"
+        "project_description": "Toto jsou mé 3 oblíbené projekty, které jsem doposud udělal. Každý má svůj unikátní styl a důvod proč jsou, taktéž si myslím, že mě posunuli nejdál z mé celé Vývojařské kariéry",
+        "tools": "Nástroje",
+        "tools_description": "Tady vidíte nástroje, které používám ve svých projektech",
+        "programming_lang": "Programovací jazyky",
+        "frameworks": "Aplikační rámce",
+        "libraries": "Knihovny"
     },
     "footer": {
         "get_in_touch": "Ozvěte se",

@@ -1,0 +1,32 @@
+{
+    "header": {
+        "contacts": "KONTAKTE",
+        "library": "BIBLIOTHEK"
+    },
+    "main": {
+        "intro": "Ich bin Nikolas",
+        "description": "Frontend- & Backend-Entwickler",
+        "description2": "Frontend- & Backend-Entwickler & Programmierer",
+        "vision": "Ich mache Ihre Vision zur Realität",
+        "focus": "Ich konzentriere mich auf sauberen, schnellen und zuverlässigen Code und auch auf",
+        "focus2": "Tolle UI/UX",
+        "programmer": "Programmierer",
+        "programmer2": "Ich kann Ihre Systeme zum Laufen bringen",
+        "projects": "Projekte",
+        "project_description": "Das sind meine 3 Lieblingsprojekte, die ich bisher gemacht habe. Jedes hat seinen einzigartigen Stil und Grund, warum es existiert, und ich denke auch, dass sie mich am weitesten in meiner gesamten Entwicklerkarriere gebracht haben.",
+        "tools": "Werkzeuge",
+        "tools_description": "Hier sehen Sie die Werkzeuge, die ich in meinen Projekten verwende",
+        "programming_lang": "Programmiersprachen",
+        "frameworks": "Anwendungsrahmen",
+        "libraries": "Bibliotheken"
+    },
+    "footer": {
+        "get_in_touch": "Nehmen Sie Kontakt auf",
+        "connect": "Verbindung",
+        "portfolio": "Portfolio von Nikolas Stankovič"
+    },
+    "library": {
+        "search": "Suchen",
+        "search_description": "Suchen Sie nach allem, was Sie möchten"
+    }
+}
