@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     let translations = {};
+    const langSelect = document.querySelector(".dropdown")
 
     const loadTranslations = async (lang) => {
         fetch(`../Languages/${lang}.json`)
@@ -44,10 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };  
 
-    const dropdownEvent = () => {
-        document.querySelector(".dropdown").dropdown
+    const updateLang = (e) => {
+        selectedLang = e.target.value
+        loadTranslations(selectedLang)
     }
 
+    langSelect.addEventListener("change", updateLang)
+
     // Load default language
-    loadTranslations("es");
+    loadTranslations("en");
 });
