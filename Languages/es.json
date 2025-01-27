@@ -1,7 +1,8 @@
 {
     "header": {
         "contacts": "CONTACTOS",
-        "library": "BIBLIOTECA"
+        "library": "BIBLIOTECA",
+        "home": "HOGAR"
     },
     "main": {
         "intro": "Soy Nikolas",
@@ -28,5 +29,6 @@
     "library": {
         "search": "Buscar",
         "search_description": "Busca cualquier cosa que desees"
-    }
+    },
+    "lang": "Español"
 }

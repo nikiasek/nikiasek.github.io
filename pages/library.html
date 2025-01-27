@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>N - S | Library</title>
+    <link rel="shortcut icon" href="../assets/index/logo2-w.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/basic.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/library.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <script defer src="../Apps/translation.js"></script>
     <script defer src="../Apps/library.js"></script>
     <script src="https://kit.fontawesome.com/3e19948a92.js" crossorigin="anonymous"></script>
 </head>
@@ -21,10 +23,24 @@
                 <a href="https://github.com/nikiasek" target="_blank" class="gradient-text">GITHUB</a>
             </div>
             <div class="header-item">
-                <a href="#footer" class="gradient-text">CONTACTS</a>
+                <a href="#footer" class="gradient-text contacts">CONTACTS</a>
             </div>
             <div class="header-item">
-                <a href="../index.html" class="gradient-text">HOME</a>
+                <a href="../index.html" class="gradient-text home">LIBRARY</a>
+            </div>
+            <div class="dropdown-lang">
+                <div class="custom-dropdown">
+                    <div class="selected">
+                        <span class="gradient-text lang_selected"></span>
+                        <img src="../assets/arrowhead.png" alt="">
+                    </div>
+                    <div class="options">
+                        <div class="option" data-value="en">English</div>
+                        <div class="option" data-value="de">Deutsch</div>
+                        <div class="option" data-value="cz">Česky</div>
+                        <div class="option" data-value="es">Español</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -36,21 +52,20 @@
         </label>
         <div class="nav-mobile">
             <a href="https://github.com/nikiasek" target="_blank" class="gradient-text">GITHUB</a>
-            <a href="#footer" class="gradient-text">CONTACTS</a>
-            <a href="../index.html" class="gradient-text">HOME</a>
+            <a href="#footer" class="gradient-text contacts2">CONTACTS</a>
+            <a href="pages/library.html" class="gradient-text home2">HOME</a>
         </div>
         <div class="mobile-text">
-            <p>I'm Nikolas</p>
-            <h1><span class="gradient-text">Frontend</span>, <span class="gradient-text">Backend developer</span> & <span class="gradient-text">Programmer</span></h1>
-            <p>I will make your vision come true</p>
+            <p class="intro2"></p>
+            <h1 class="description2"></h1>
+            <p class="vision2"></p>
         </div>
     </nav>
-
     <div class="container">
-        <h1 class="gradient-text">Search</h1>
-            <p>Search for anything you'd like</p>
+        <h1 class="gradient-text search"></h1>
+        <p class="search_description"></p>
         <div class="finder">
-            <input type="text" id="myInput" placeholder="Search for names..">
+            <input type="text" id="myInput">
             <div class="filterCard">
                 <input class="check hidden" type="checkbox" id="Javascript" value="js">
                 <label for="Javascript">Javascript</label>
@@ -88,12 +103,12 @@
                 <img src="../assets/index/logo2-w.png" alt="">
             </div>
             <div class="footer-flex-item">
-                <h3 class="gray-text">Get in touch</h3>
+                <h3 class="gray-text get_in_touch"></h3>
                 <p><a href="mailto:nikiasek50@gmail.com">nikiasek50@gmail.com</a></p>
                 <p><a href="mailto:n.stankovic@student.nosch.cz">n.stankovic@student.nosch.cz</a></p>
             </div>
             <div class="footer-flex-item">
-                <h3 class="gray-text">Connect</h3>
+                <h3 class="gray-text connect"></h3>
                 <a href="https://www.instagram.com/nikiasekcz/" target="_blank">
                     <img src="../assets/index/instagram.png" alt="">
                 </a>
@@ -107,8 +122,8 @@
                 </a>
             </div>
         </div>
-        <p class="gray-text">Portfolio by Nikolas Stankovič</p>
-        <p class="gray-text">@2024 Nikolas Stankovič</p>
+        <p class="gray-text portfolio"></p>
+        <p class="gray-text">@2025 Nikolas Stankovič</p>
     </div>
 </body>
 </html>

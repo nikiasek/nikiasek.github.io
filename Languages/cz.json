@@ -1,7 +1,8 @@
 {
     "header": {
         "contacts": "KONTAKTY",
-        "library": "KNIHOVNA"
+        "library": "KNIHOVNA",
+        "home": "DOMŮ"
     },
     "main": {
         "intro": "Já jsem Nikolas",
@@ -28,5 +29,6 @@
     "library": {
         "search" : "Vyhledat",
         "search_description": "Vyhledejte cokoliv co chcete"
-    }
+    },
+    "lang": "Česky"
 }

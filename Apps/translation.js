@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     let translations = {};
-    const langSelect = document.querySelector(".dropdown")
+    const dropdown = document.querySelector('.custom-dropdown');
+    const selected = dropdown.querySelector('.selected');
+    const options = dropdown.querySelector('.options');
+    let cookieValue
 
     const loadTranslations = async (lang) => {
         fetch(`../Languages/${lang}.json`)
@@ -20,38 +23,75 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const updateTextContent = () => {
-        document.querySelector(".contacts").innerText = translations.header.contacts;
-        document.querySelector(".contacts2").innerText = translations.header.contacts;
-        document.querySelector(".library").innerText = translations.header.library;
-        document.querySelector(".library2").innerText = translations.header.library;
-        document.querySelector(".intro").innerText = translations.main.intro;
-        document.querySelector(".description").innerText = translations.main.description;
-        document.querySelector(".description2").innerHTML = `<span class="gradient-text">${translations.main.description2}</span>`
-        document.querySelector(".vision").innerText = translations.main.vision;
-        document.querySelector(".vision2").innerText = translations.main.vision;
-        document.querySelector(".focus").innerHTML =    `${translations.main.focus} <span class="gradient-text">${translations.main.focus2}</span>`;
-        document.querySelector(".programmer").innerText = translations.main.programmer;
-        document.querySelector(".programmer2").innerText = translations.main.programmer2;
-        document.querySelector(".projects").innerText = translations.main.projects;
-        document.querySelector(".project_description").innerText = translations.main.project_description;
-        document.querySelector(".tools").innerText = translations.main.tools
-        document.querySelector(".tools_description").innerText = translations.main.tools_description
-        document.querySelector(".programming_lang").innerText = translations.main.programming_lang
-        document.querySelector(".frameworks").innerText = translations.main.frameworks
-        document.querySelector(".libraries").innerText = translations.main.libraries
-        document.querySelector(".get_in_touch").innerText = translations.footer.get_in_touch
-        document.querySelector(".connect").innerText = translations.footer.connect
-        document.querySelector(".portfolio").innerText = translations.footer.portfolio
-
-    };  
+        const updateElement = (selector, textContent) => {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.innerText = textContent;
+            }
+        };
+    
+        updateElement(".contacts", translations.header.contacts);
+        updateElement(".contacts2", translations.header.contacts);
+        updateElement(".library", translations.header.library);
+        updateElement(".library2", translations.header.library);
+        updateElement(".home", translations.header.home);
+        updateElement(".home2", translations.header.home);
+        updateElement(".intro", translations.main.intro);
+        updateElement(".description", translations.main.description);
+        if (document.querySelector(".description2")) {
+            document.querySelector(".description2").innerHTML = `<span class="gradient-text">${translations.main.description2}</span>`;
+        }
+        updateElement(".vision", translations.main.vision);
+        updateElement(".vision2", translations.main.vision);
+        if (document.querySelector(".focus")) {
+            document.querySelector(".focus").innerHTML = `${translations.main.focus} <span class="gradient-text">${translations.main.focus2}</span>`;
+        }
+        updateElement(".programmer", translations.main.programmer);
+        updateElement(".programmer2", translations.main.programmer2);
+        updateElement(".projects", translations.main.projects);
+        updateElement(".project_description", translations.main.project_description);
+        updateElement(".tools", translations.main.tools);
+        updateElement(".tools_description", translations.main.tools_description);
+        updateElement(".programming_lang", translations.main.programming_lang);
+        updateElement(".frameworks", translations.main.frameworks);
+        updateElement(".libraries", translations.main.libraries);
+        updateElement(".get_in_touch", translations.footer.get_in_touch);
+        updateElement(".connect", translations.footer.connect);
+        updateElement(".portfolio", translations.footer.portfolio);
+        updateElement(".lang_selected", translations.lang);
+        updateElement(".search", translations.library.search);
+        updateElement(".search_description", translations.library.search_description)
+    };
+    
 
     const updateLang = (e) => {
-        selectedLang = e.target.value
-        loadTranslations(selectedLang)
+        loadTranslations()
     }
 
-    langSelect.addEventListener("change", updateLang)
+    selected.addEventListener('click', () => {
+        options.style.display = options.style.display === 'block' ? 'none' : 'block';
+    });
 
-    // Load default language
-    loadTranslations("en");
+    options.querySelectorAll('.option').forEach(option => {
+        option.addEventListener('click', () => {
+            selected.innerHTML = `<span class="gradient-text">${option.textContent}</span><img src="assets/arrowhead.png" alt="">`;
+            options.style.display = 'none';
+            document.cookie =`lang=${option.getAttribute("data-value")}; SameSite=None; Secure  `
+            console.log(option.getAttribute('data-value'))
+            loadTranslations(option.getAttribute('data-value'))
+        });
+    });
+    
+    if(!document.cookie.split("; ").find((row) => row.startsWith("lang"))) {
+        document.cookie =`lang=en; SameSite=None; Secure`
+        loadTranslations(cookieValue)
+    }
+    else {
+        cookieValue = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("lang="))
+        ?.split("=")[1];
+        loadTranslations(cookieValue); 
+    }
+    
 });
