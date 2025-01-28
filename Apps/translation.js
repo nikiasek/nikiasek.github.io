@@ -62,11 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateElement(".search", translations.library.search);
         updateElement(".search_description", translations.library.search_description)
     };
-    
-
-    const updateLang = (e) => {
-        loadTranslations()
-    }
 
     selected.addEventListener('click', () => {
         options.style.display = options.style.display === 'block' ? 'none' : 'block';
@@ -82,9 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     
-    if(!document.cookie.split("; ").find((row) => row.startsWith("lang"))) {
-        document.cookie =`lang=en; SameSite=None; Secure`
-        loadTranslations(cookieValue)
+    if(!document.cookie.split("; ").find((row) => row.startsWith("lang="))) {
+        loadTranslations("en")
     }
     else {
         cookieValue = document.cookie
@@ -93,5 +87,4 @@ document.addEventListener("DOMContentLoaded", () => {
         ?.split("=")[1];
         loadTranslations(cookieValue); 
     }
-    
 });
