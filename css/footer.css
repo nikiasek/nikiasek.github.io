@@ -38,6 +38,10 @@ h3 {
     .footer-flex-item>img {
         width: 15vw;
     }
+
+    a > img {
+        width: 3vw;
+    }
 }
 
 @media only screen and (max-width: 811px) {

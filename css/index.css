@@ -128,7 +128,7 @@
 @media only screen and (max-width: 1025px) {
 
     .container-item-1 > img {
-        width: 100%;
+        width: 30%;
     }
 
     .container-3>img {
@@ -157,12 +157,37 @@
     .projects-item {
         width: 20vw;
     }
+
+    .flex-item {
+        width: 25%;
+    }
+
+    .container-3 > img {
+        width: 20%;
+    }
+
+    .projects-item {
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 811px) {
 
+    .container-item-1 > img {
+        width: 35%;
+    }
+
+    .links {
+        justify-content: space-between;
+        flex-grow: 5;
+    }
+
+    .logo {
+        flex-grow: 3;
+    }
+
     .container-text-2 {
-    right: 8rem;
+    right: 5rem;
     top: 0;
     transition-duration: 0.5s;
     }
@@ -181,7 +206,7 @@
     }
 
     .flex-item {
-        width: 20vw
+        width: 100%
     }
 
     .container-3>img {

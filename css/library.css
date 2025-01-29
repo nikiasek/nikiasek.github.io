@@ -108,3 +108,75 @@ input[type=checkbox]:checked+label {
     opacity: 0;
     animation: pop-in 1s forwards;
 }
+
+@media only screen and (max-width: 1025px) {
+    .finder {
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 1rem;
+    }
+
+    #myInput {
+        width: 100%;
+    }
+
+    .flex-item {
+        width: 40%;
+        margin: 0
+    }
+
+    .container-items {
+        margin-top: 5rem;
+        gap: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 811px) {
+    .finder {
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 1rem;
+    }
+
+    #myInput {
+        width: 100%;
+    }
+
+    .flex-item {
+        width: 37%;
+    }
+
+    .container-items {
+        margin-top: 5rem;
+        gap: 3rem;
+    }
+
+    .flex-item {
+        margin: 0
+    }
+}
+
+@media only screen and (max-width: 429px) {
+    .finder {
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 1rem;
+    }
+
+    #myInput {
+        width: 100%;
+    }
+
+    .flex-item {
+        width: 100%;
+    }
+
+    .container-items {
+        margin-top: 5rem;
+    }
+
+    .flex-item {
+        margin: 0
+    }
+}

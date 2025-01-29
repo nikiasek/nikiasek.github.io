@@ -105,6 +105,7 @@ a:hover {
     padding: 1rem;
     font-size: 1.25rem; /* Adjust font size */
     color: white; /* Text color */
+    text-align: center;
 }
 
 .selected > img {

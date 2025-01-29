@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const dropdown = document.querySelector('.custom-dropdown');
     const selected = dropdown.querySelector('.selected');
     const options = dropdown.querySelector('.options');
+    const mobDropdown = document.querySelector(".mob-dropdown");
+    const mobSelected = mobDropdown.querySelector(".selected");
+    const mobOptions = mobDropdown.querySelector(".options");
     let cookieValue
 
     const loadTranslations = async (lang) => {
@@ -59,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateElement(".connect", translations.footer.connect);
         updateElement(".portfolio", translations.footer.portfolio);
         updateElement(".lang_selected", translations.lang);
+        updateElement(".lang_selected2", translations.lang)
         updateElement(".search", translations.library.search);
         updateElement(".search_description", translations.library.search_description)
     };
@@ -66,12 +70,26 @@ document.addEventListener("DOMContentLoaded", () => {
     selected.addEventListener('click', () => {
         options.style.display = options.style.display === 'block' ? 'none' : 'block';
     });
+    
+    mobSelected.addEventListener("click", () => {
+        mobOptions.style.display = mobOptions.style.display === "block" ? "none" : "block";
+    })
 
     options.querySelectorAll('.option').forEach(option => {
         option.addEventListener('click', () => {
-            selected.innerHTML = `<span class="gradient-text">${option.textContent}</span><img src="assets/arrowhead.png" alt="">`;
+            selected.innerHTML = `<span class="gradient-text">${option.textContent}</span><img src="../assets/arrowhead.png" alt="">`;
             options.style.display = 'none';
-            document.cookie =`lang=${option.getAttribute("data-value")}; SameSite=None; Secure  `
+            document.cookie =`lang=${option.getAttribute("data-value")}; SameSite=None; Secure; Path=/  `
+            console.log(option.getAttribute('data-value'))
+            loadTranslations(option.getAttribute('data-value'))
+        });
+    });
+
+    mobOptions.querySelectorAll('.option').forEach(option => {
+        option.addEventListener('click', () => {
+            mobSelected.innerHTML = `<span class="gradient-text">${option.textContent}</span><img src="../assets/arrowhead.png" alt="">`;
+            mobOptions.style.display = 'none';
+            document.cookie =`lang=${option.getAttribute("data-value")}; SameSite=None; Secure; Path=/  `
             console.log(option.getAttribute('data-value'))
             loadTranslations(option.getAttribute('data-value'))
         });
