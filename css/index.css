@@ -200,19 +200,6 @@
         display: none;
     }
 
-    .mobile-text {
-        padding: 3rem;
-        padding-top: 0.1rem;
-    }
-
-    .mobile-text>p {
-        margin: 0rem;
-        padding: 0;
-    }
-
-    .mobile-text>h1 {
-        padding-top: 0.1rem;
-    }
 
     .projects-item, .flex-item {
         width: 80vw;

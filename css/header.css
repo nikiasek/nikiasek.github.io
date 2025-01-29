@@ -171,8 +171,21 @@ a:hover {
         display: none;
     } 
 
+    .mobile-text {
+        padding: 3rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .mobile-text>p {
+        margin: 0rem;
+        padding: 0;
+    }
+
     a {
         font-size: 1.25rem;
     }
+
+
 }
 
