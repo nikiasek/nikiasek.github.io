@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color: #1E000E;
+    --foreground-color: #823038;
+    --text-color: #F2FDFF;
+    --text-2: #dc9999;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    text-align: center;
+    padding: 50px;
+    background-color: var(--background-color);
+}
+
+.container {
+    background-color: var(--foreground-color) ;
+    padding: 2rem;
+    border-radius: 2rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-weight: 300;
+}
+
+
+.input {
+    display: flex;
+    font-size: 1rem; /* Increase font-size */
+    padding: 0.5rem;
+    border: none;
+    border-radius: 1rem;
+    transition: 0.5s;
+    background-color: var(--text-color);
+}
+
+svg {
+    width: 24px;
+    margin-top: 4px;
+}
+
+
+
+#hledanyText {
+    width: 20vw; 
+    border: none;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+button {
+    margin-top: 1rem;
+    width: 20%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border-style: none;
+    background-color: var(--text-color);
+}
+
+.result {
+    background-color: var(--foreground-color);
+    margin-top: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: left;
+}
+
+a {
+    color: var(--text-color)
+  }
+
+
+a:visited {
+    color: var(--text-2)
+  }
