@@ -9,8 +9,25 @@
 
 .projects {
     background-color: var(--bg);
-    height: 199px;
     border-style:solid;
     border-width: 2px 0 0 0;
     border-color: var(--primary);
+    align-items: center;
+    text-align: center;
+
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.project-card {
+    height: 250px;
+    background-color: aliceblue;
+    padding: 10%;
+    width: 80%;
 }
