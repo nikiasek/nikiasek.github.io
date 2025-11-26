@@ -116,8 +116,20 @@ a {
   letter-spacing: -4px;
 }
 
+.text-tertiary {
+  font-weight: 200;
+  font-size: 2rem;
+  letter-spacing: 0px;
+}
+
 .text-description {
   font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+}
+
+.text-description-secondary {
+  font-weight: 100;
   font-size: 1.5rem;
   letter-spacing: 0px;
 }
