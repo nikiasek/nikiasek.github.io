@@ -15,7 +15,6 @@
     align-items: center;
     text-align: center;
     width: 100%;
-
 }
 
 .project-cards {
@@ -42,4 +41,40 @@
     box-shadow: 0 0 2px var(--primary);
     transform: translateY(-2px); /* jemné zvednutí */
     transition: all 0.3s ease;
+}
+
+
+
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    cursor: grab;
+}
+
+.carousel:active {
+    cursor: grabbing;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 40px;
+    transform: translateX(0);
+}
+
+.carousel-track img {
+    width: 70px;
+    height: 70px;
+    opacity: 0.8;
+    transition: opacity .2s;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+
+}
+
+.carousel-track img:hover {
+    opacity: 1;
 }
