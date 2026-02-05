@@ -3,7 +3,7 @@
   const track = carousel.querySelector('.carousel-track');
   
   // CONFIG
-  const BUFFER_MULTIPLIER = 3; // Kolikrát více než viditelná oblast
+  const BUFFER_MULTIPLIER = 2; // Kolikrát více než viditelná oblast
   const SPEED = 100; // px/sec
   
   // 1. Získání rozměrů
@@ -13,7 +13,7 @@
   const originalItems = Array.from(track.children);
   const itemWidth = originalItems[0].offsetWidth;
   const step = itemWidth + gap;
-  const carouselWidth = carousel.offsetWidth;
+  const carouselWidth = carousel.offsetWidth; // ?
   
   // 2. Kolik položek vidíme + buffer
   const visibleItems = Math.ceil(carouselWidth / step);
@@ -33,7 +33,8 @@
   track.innerHTML = originalHTML + clonesHTML;
   
   const allItems = Array.from(track.children);
-  const segmentWidth = step * originalItems.length - gap;
+  const segmentWidth = originalItems.length * itemWidth + (originalItems.length) * gap + gap;
+
   const totalWidth = step * allItems.length - gap;
   
   console.log(`Vytvořeno ${allItems.length} položek (${originalItems.length} originál + ${allItems.length - originalItems.length} klonů)`);
@@ -42,24 +43,7 @@
   // 4. Animace s plynulým resetem
   let pos = 0;
   let lastTime = null;
-  
-  function update(now) {
-    if (!lastTime) lastTime = now;
-    const dt = Math.min((now - lastTime) / 1000, 0.1);
-    lastTime = now;
-    
-    pos -= SPEED * dt;
-    
-    // Reset: když ujedeme původní segment
-    // Máme ale dostatek klonů, takže to není vidět
-    if (Math.abs(pos) >= segmentWidth) {
-      pos += segmentWidth;
-      console.log('Seamless reset na pozici:', pos.toFixed(1));
-    }
-    
-    track.style.transform = `translateX(${pos}px)`;
-    requestAnimationFrame(update);
-  }
+
   
   // 5. Interakce
   let isPaused = false;

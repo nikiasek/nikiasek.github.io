@@ -91,7 +91,7 @@ body {
 
 .fLogo2 {
   font-size: 2rem;
-  margin: 0;
+  margin: auto;
   letter-spacing: 5px;
   font-weight: 300;
   position: relative;
@@ -102,8 +102,8 @@ body {
   content: "";             /* Required for pseudo-element to show */
   position: absolute;      /* Position relative to .fLogo2 */
   top: -0.5rem;                  /* Align to the top */
-  left: 0;                 /* Align to the left */
-  width: 100%;
+  left: -50%;                 /* Align to the left */
+  width: 200%;
   height: 2px;             /* Thickness of the line */
   background-color: var(--text);   /* Line color */
 }
