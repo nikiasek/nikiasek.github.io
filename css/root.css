@@ -89,6 +89,12 @@ body {
   letter-spacing: -4px;
 }
 
+@media only screen and (max-width: 480px) {
+  .fLogo {
+    font-size: 3rem;
+  }
+}
+
 .fLogo2 {
   font-size: 2rem;
   margin: auto;

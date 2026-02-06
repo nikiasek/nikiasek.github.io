@@ -1,5 +1,9 @@
-myElement = document.getElementById("switch")
+myElement = document.getElementsByClassName("switch")
 
-myElement.addEventListener("click", function (e) {
+myElement[0].addEventListener("click", function (e) {
+  document.body.classList.toggle("light");
+});
+
+myElement[1].addEventListener("click", function (e) {
   document.body.classList.toggle("light");
 });

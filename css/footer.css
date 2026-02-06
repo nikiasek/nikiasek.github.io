@@ -1,6 +1,9 @@
 footer {
     background-color: var(--bg);
     padding: 2rem;
+    border-style:solid;
+    border-width: 2px 0 0 0;
+    border-color: var(--primary);
 }
 
 .footer-flex {
@@ -56,6 +59,13 @@ h3 {
 }
 
 @media only screen and (max-width: 811px) {
+
+    .footer-flex {
+        grid-template-columns: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
     .flex-item>h1 {
         font-size: 1.7rem;
     }
@@ -63,11 +73,21 @@ h3 {
     .footer-flex-item>a>img {
         width: 5vw;
     }
+
+    .footer-flex-item:nth-child(1) {
+        margin: 2rem;
+        text-align: center
+    }
+
+    .footer-flex-item:nth-child(3) {
+        margin: 2rem;
+        text-align:center;
+    }
 }
 
 @media only screen and (max-width: 429px) {
     .footer-flex {
-        flex-direction: column;
+        grid-template-columns: 100%;
     }
 
     .footer-flex-item {

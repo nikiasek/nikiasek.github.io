@@ -6,7 +6,7 @@ header {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 0rem 0 2rem;
 }
 
 .links {
@@ -16,7 +16,7 @@ header {
     display: flex;
 }
 
-#switch {
+.switch {
   position: relative;
   background: transparent;
   border: none;
@@ -30,12 +30,19 @@ header {
   overflow: hidden;
 }
 
-#switch:hover {
+.switch svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+
+.switch:hover {
   background: var(--primary);
   fill: var(--bg-dark);
   color: var(--bg-dark);
   box-shadow: 0 0 16px 4px var(--primary);
-  transform: translateY(-2px); /* jemné zvednutí */
+  transform: translateY(-2px);
 }
 .links a {
   position: relative;
@@ -58,4 +65,93 @@ header {
   color: var(--bg-dark);
   box-shadow: 0 0 16px 4px var(--primary);
   transform: translateY(-2px);
+}
+
+.mobile-links {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.bar {
+    width: 28px;
+    height: 3px;
+    background: var(--text);
+    transition: all 0.3s ease;
+}
+
+/* animace do X */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.mobile-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    background: var(--bg);
+    border-color: var(--primary);
+    border-style: solid;
+    border-top: 2px;
+    border-left: 2px;
+    border-right: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem 3rem;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+.mobile-links.active {
+    right: 0;
+}
+
+
+.mobile-links.active {
+    right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+      grid-template-columns: 60% 40%;
+      padding: 0.5rem 0.5rem 0 0.5rem;
+      border-image: linear-gradient(to right, var(--primary) 0%, transparent 40%, transparent 60% , var(--primary) 100%) 1;
+    }
+
+    .links {
+      gap: 0;
+      font-size: 1rem;
+    }
+
+    .mobile-links {
+      display: block;
+      justify-content:right;
+      align-items:center; 
+    }  
+    
+    .links {
+      display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        justify-self: end;
+        align-self: center;
+    }
 }

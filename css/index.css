@@ -8,6 +8,14 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 100%;
+        height: auto;
+        padding: 2rem 0;
+    }
+}
+
 .projects {
     background-color: var(--bg);
     border-style:solid;
@@ -23,6 +31,13 @@
     margin: auto;
     padding: 2%;
     width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+    .project-cards {
+        width: 90%;
+    }
+    
 }
 
 .project-card {
@@ -47,6 +62,8 @@
     border-style:solid;
     border-width: 2px 0 0 0;
     border-color: var(--primary);
+    border-width: 2px 0 0 0;
+    border-color: var(--primary);
 }
 
 .carousel {
@@ -55,6 +72,8 @@
     padding: 40px 0;
     cursor: grab;
     margin: auto;
+        border-width: 2px 0 0 0;
+    border-color: var(--primary);
 }
 
 .carousel:active {
@@ -62,9 +81,16 @@
 }
 
 .carousel-track {
-    display: flex;
     gap: 40px;
     transform: translateX(0);
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-track {
+        grid-template-columns: repeat(3, auto);
+    }
 }
 
 .carousel-track img {
